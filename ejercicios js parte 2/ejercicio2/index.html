@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de caracteres</title>
+</head>
+<body>
+    <textarea id="texto" rows="4" cols="50" placeholder="Escribe aquí..."></textarea>
+    <p>Caracteres restantes: <span id="contador">0</span></p>
+
+    <script>
+        const textarea = document.getElementById('texto');
+        const contador = document.getElementById('contador');
+
+        textarea.addEventListener('input', () => {
+            const longitudTexto = textarea.value.length;
+            contador.textContent = longitudTexto;
+        });
+    </script>
+</body>
+</html>
